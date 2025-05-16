@@ -13,12 +13,12 @@ def getLocationNames():
 def load_artifacts():
     global dataColumns, locations, model
     # Load columns
-    with open("C:/Users/RANDEEP/My_Projects/ML_Projects/Bangalore-House-Price-Predictor/columns.json", 'r') as f:
+    with open("columns.json", 'r') as f:
         dataColumns = json.load(f)["data_columns"]
         locations = dataColumns[3:]
 
     # Load model
-    with open("C:/Users/RANDEEP/My_Projects/ML_Projects/Bangalore-House-Price-Predictor/bangaloreHomePricesModel.pickle", 'rb') as f:
+    with open("bangaloreHomePricesModel.pickle", 'rb') as f:
         model = pickle.load(f)
 
 def getEstimatedPrice(location, sqft, bhk, bath):
